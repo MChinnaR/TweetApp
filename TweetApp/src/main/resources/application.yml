@@ -1,0 +1,40 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: TWEET_APP
+  datasource:
+    url: jdbc:mysql://localhost:3306/tweet_app?createDatabaseIfNotExist=true&useSSL=true
+    username: root
+    password: pass@word1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  security:
+    user:
+      name: user
+      password: user123
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: chinna.mondem@gmail.com
+#    password: bpblmrvqxklsqthi
+#    properties:
+#      smtp:
+#        auth: true
+#        starttls:
+#          enable: true
+      
+      
+      
+#spring.mail.host=smtp.gmail.com
+#spring.mail.port=587
+#spring.mail.username=chinna.mondem@gmail.com
+#spring.mail.password=bpblmrvqxklsqthi
+#spring.mail.properties.mail.smtp.auth=true
+#spring.mail.properties.mail.smtp.starttls.enable=true
